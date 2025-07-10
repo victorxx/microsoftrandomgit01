@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Encontre as últimas notícias sobre Xbox, games, lançamentos e novidades no universo dos videogames.">
+<meta name="keywords" content="Xbox, notícias, games, lançamentos, Xbox Series X, Xbox Series S, Xbox Game Pass, Microsoft, tecnologia">
+<meta name="author" content="victorsaib">
+<meta property="og:title" content="Notícias sobre Xbox e Jogos">
+<meta property="og:description" content="Fique por dentro das últimas notícias sobre Xbox, novos jogos, lançamentos e tudo sobre o universo dos games.">
+<meta property="og:image" content="url_da_imagem.jpg">
+
+    <title>Notícias sobre Microsoft e Jogos</title>
+
+    <style>
+        /* Estilos básicos e responsivos */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #DA70D6;  /* Cor de fundo: Orquídea */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #003B5C;  /* Azul escuro do PlayStation */
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        .news-box {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .buttons-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .btn {
+            background-color: #005A8B;  /* Azul mais claro do PlayStation */
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #003B5C;  /* Azul escuro quando hover */
+        }
+        footer {
+            background-color: #003B5C;  /* Azul escuro do PlayStation */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        /* Estilo da propaganda piscante */
+        #propaganda-piscante, #propaganda-piscante2 {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: #FF4C00;  /* Laranja vibrante */
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+            animation: piscando 1s infinite alternate;
+            cursor: pointer;
+            z-index: 9999;
+        }
+        #propaganda-piscante2 {
+            left: auto;
+            right: 10px;
+        }
+        /* Estilo do iframe como propaganda */
+        #iframe-propaganda {
+            width: 100%;
+            height: 800px;  /* Aumento da altura para 800px */
+            border: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        #iframe-propaganda:hover {
+            transform: scale(1.05);
+        }
+        /* Animação piscante */
+        @keyframes piscando {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Microsoft tecnologia noticia</h1>
+    </header>
+    
+    <main>
+        <!-- Propaganda com iframe -->
+        <div id="iframe-propaganda" onclick="window.open('https://victorxx.github.io/iframegithub01/', '_blank')">
+            <iframe id="myIframe" src="https://victorxx.github.io/iframegithub01/" allowfullscreen loading="lazy" width="100%" height="400"></iframe>
+        </div>
+        
+        <!-- Container de notícias -->
+        <div id="news-container"></div>
+    </main>
+
+    <!-- Propagandas piscantes -->
+    <div id="propaganda-piscante" onclick="window.open('https://victorxx.github.io/topicogithub01/randomizador.html', '_blank')">
+        OFERTA IMPERDÍVEL!
+    </div>
+
+    <div id="propaganda-piscante2" onclick="window.open('https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g', '_blank')">
+        COMECE NO AIRBNB HJ MESMO
+    </div>
+
+    <footer>
+        <p>Microsoft| <a href="#">Termos de Serviço</a> | <a href="#">Política de Privacidade</a></p>
+    </footer>
+
+    <script>
+        // Array de notícias
+        const noticias = [
+                         {
+                                titulo: "Xbox Series X | S Recebe Novos Recursos em 2025",
+                                descricao: "A Microsoft anunciou novos recursos para as consolas Xbox Series X e S, incluindo melhorias em performance e compatibilidade com jogos antigos.",
+                                link: "https://www.xbox.com/novos-recursos-2025"
+                            },
+                            {
+                                titulo: "Lançamento do Xbox Game Pass de Julho de 2025",
+                                descricao: "Confira os jogos que estão chegando ao Xbox Game Pass em julho de 2025, com títulos incríveis para todos os gostos.",
+                                link: "https://www.xbox.com/gamepass-julho-2025"
+                            },
+                            {
+                                titulo: "Fable IV: O Retorno da Maior Franquia de RPG do Xbox",
+                                descricao: "A Microsoft revelou o primeiro gameplay de Fable IV, trazendo de volta a icônica série de RPG para o Xbox Series X.",
+                                link: "https://www.xbox.com/fable4-gameplay"
+                            },
+                            {
+                                titulo: "Halo Infinite: Novos Desafios e Mapa em 2025",
+                                descricao: "Halo Infinite recebe uma atualização significativa com novos mapas, desafios e modos de jogo, prometendo mais diversão para os fãs.",
+                                link: "https://www.xbox.com/halo-infinite-2025-atualizacao"
+                            },
+                            {
+                                titulo: "Forza Motorsport 8: A Nova Era da Simulação de Corrida",
+                                descricao: "Forza Motorsport 8 chega com gráficos melhorados e uma física de direção ainda mais realista, prometendo agradar a todos os fãs de simuladores de corrida.",
+                                link: "https://www.xbox.com/forza-motorsport-8"
+                            },
+                            {
+                                titulo: "Xbox Series X + Xbox Cloud Gaming: A Nova Fronteira do Streaming de Jogos",
+                                descricao: "A Microsoft expandiu ainda mais o Xbox Cloud Gaming, permitindo jogar títulos AAA diretamente do seu dispositivo móvel, PC ou TV.",
+                                link: "https://www.xbox.com/xbox-cloud-gaming-2025"
+                            },
+                            {
+                                titulo: "Microsoft Anuncia Consoles Xbox Series X e S Edições Limitadas",
+                                descricao: "Em comemoração aos 25 anos de Xbox, a Microsoft lançou edições limitadas do Series X e S com designs exclusivos e novos acessórios.",
+                                link: "https://www.xbox.com/edicoes-limitadas-25-anos"
+                            },
+                            {
+                                titulo: "Xbox Live Gold: Novos Benefícios para Membros em 2025",
+                                descricao: "Membros do Xbox Live Gold ganham novos benefícios exclusivos, incluindo jogos gratuitos, descontos e mais vantagens.",
+                                link: "https://www.xbox.com/xbox-live-gold-beneficios-2025"
+                            },
+                            {
+                                titulo: "Gears of War 6: Primeiras Imagens e Detalhes",
+                                descricao: "A nova edição de Gears of War traz um enredo eletrizante e gráficos de última geração, com uma nova experiência de combate.",
+                                link: "https://www.xbox.com/gears-of-war-6"
+                            },
+                            {
+                                titulo: "Xbox e EA Anunciam Parceria para Novos Jogos de Esportes",
+                                descricao: "A parceria entre a Xbox e a EA promete trazer novos jogos de esportes com gráficos de próxima geração e inovações no gameplay.",
+                                link: "https://www.xbox.com/xbox-ea-parceria"
+                            },
+                            {
+                                titulo: "State of Decay 3: O Regresso da Sobrevivência Zumbi",
+                                descricao: "State of Decay 3 traz uma nova abordagem ao gênero de sobrevivência com gráficos aprimorados e uma narrativa envolvente.",
+                                link: "https://www.xbox.com/state-of-decay-3"
+                            },
+                            {
+                                titulo: "Xbox Series X Recebe Atualização para Suporte a 8K",
+                                descricao: "A Microsoft anunciou que o Xbox Series X agora suporta resoluções em 8K, elevando a qualidade de imagem para jogos e entretenimento.",
+                                link: "https://www.xbox.com/xbox-series-x-8k-suporte"
+                            },
+                            {
+                                titulo: "Minecraft no Xbox: Novos Recursos e Atualizações de 2025",
+                                descricao: "Minecraft continua a crescer, com novos recursos, como mundos mais expansivos e possibilidades de personalização, para os jogadores do Xbox.",
+                                link: "https://www.xbox.com/minecraft-2025"
+                            },
+                            {
+                                titulo: "Project X: O Futuro dos Jogos em Nuvem",
+                                descricao: "A Microsoft revelou mais detalhes sobre o Project X, sua nova plataforma de jogos em nuvem que promete transformar a forma como jogamos no Xbox.",
+                                link: "https://www.xbox.com/project-x-nuvem"
+                            },
+                            {
+                                titulo: "Xbox Game Studios Revela Novos Títulos para 2025",
+                                descricao: "A Microsoft está preparando novos títulos exclusivos para o Xbox, com jogos de aventura, ação e RPG que chegam ainda em 2025.",
+                                link: "https://www.xbox.com/xbox-game-studios-2025"
+                            },
+                            {
+                                titulo: "Cyberpunk 2077 no Xbox: Atualizações e Melhorias de Performance",
+                                descricao: "Cyberpunk 2077 recebe uma atualização significativa para o Xbox Series X, melhorando os gráficos e o desempenho geral do jogo.",
+                                link: "https://www.xbox.com/cyberpunk-2077-atualizacao-xbox"
+                            },
+                            {
+                                titulo: "Xbox Anuncia Novo Controle Personalizado para 2025",
+                                descricao: "A Microsoft revelou um novo controle Xbox com design personalizável e novas opções de cores e materiais.",
+                                link: "https://www.xbox.com/controle-personalizado-2025"
+                            },
+                            {
+                                titulo: "Elder Scrolls VI: Detalhes e Data de Lançamento para Xbox",
+                                descricao: "A Bethesda revelou mais informações sobre Elder Scrolls VI, incluindo detalhes do mundo aberto e da história que será exclusiva para o Xbox.",
+                                link: "https://www.xbox.com/elder-scrolls-vi-lancamento"
+                            },
+                            {
+                                titulo: "Xbox Store: Novas Ferramentas para Desenvolvedores em 2025",
+                                descricao: "A Microsoft lançou novas ferramentas para desenvolvedores no Xbox Store, permitindo uma melhor experiência para os jogadores e criadores de conteúdo.",
+                                link: "https://www.xbox.com/xbox-store-ferramentas-desenvolvedores"
+                            },
+                            {
+                                titulo: "Xbox Recebe Suporte a Realidade Virtual com Novos Acessórios",
+                                descricao: "Em 2025, a Microsoft introduziu suporte para realidade virtual no Xbox Series X, com novos acessórios e títulos VR.",
+                                link: "https://www.xbox.com/xbox-realidade-virtual-2025"
+                            }
+
+        ];
+
+        // Função para gerar e exibir as notícias
+        function exibirNoticias() {
+            const container = document.getElementById('news-container');
+            noticias.forEach((noticia) => {
+                // Cria o item da notícia
+                const newsItem = document.createElement('div');
+                newsItem.classList.add('news-box');
+                newsItem.innerHTML = `
+                    <h3>${noticia.titulo}</h3>
+                    <p>${noticia.descricao}</p>
+                `;
+                
+                // Adiciona o botão "Ver Mais"
+                const btnVerMais = document.createElement('div');
+                btnVerMais.classList.add('buttons-container');
+                btnVerMais.innerHTML = ` 
+                    <button class="btn" onclick="window.location.href='${noticia.link}'">Ver Mais</button>
+                `;
+                
+                // Adiciona a notícia e o botão "Ver Mais"
+                container.appendChild(newsItem);
+                container.appendChild(btnVerMais);
+            });
+        }
+
+        // Carrega as notícias ao carregar a página
+        window.onload = exibirNoticias;
+    </script>
+</body>
+</html>
